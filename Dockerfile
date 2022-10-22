@@ -18,7 +18,7 @@ LABEL org.opencontainers.image.source="https://github.com/MetaCubeX/Clash.Meta"
 
 RUN apk add --no-cache ca-certificates tzdata
 
-MKDIR /root/.config/clash
+RUN mkdir /root/.config/clash
 
 COPY --from=builder /clash-config/ /root/.config/clash/
 COPY --from=builder /clash /clash
